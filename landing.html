@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Desert Pulse | Youth Climate Action El Paso</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: { night: '#0a0612', sunset1: '#ff7b00', sunset2: '#ff3c38', sand: '#ffd166', mountain: '#1b1130' },
+          animation: { 'pulse-slow': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite' }
+        }
+      }
+    }
+  </script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+    body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+    .sunset-gradient { background: linear-gradient(180deg, #c5322f 0%, #ff7b00 40%, #ffd166 70%, #0a0612 100%); }
+    
+    /* Custom Kit Form Styling to match Desert Pulse */
+    .formkit-form { width: 100% !important; margin: 0 auto !important; }
+    .formkit-fields { display: flex !important; flex-direction: column !important; gap: 12px !important; }
+    @media (min-width: 640px) { .formkit-fields { flex-direction: row !important; } }
+    .formkit-field { flex: 1 !important; }
+    .formkit-input { width: 100% !important; padding: 1rem 1.5rem !important; border-radius: 0.75rem !important; background: rgba(255,255,255,0.05) !important; border: 1px solid rgba(255,255,255,0.2) !important; color: white !important; outline: none !important; }
+    .formkit-input:focus { border-color: #ff7b00 !important; }
+    .formkit-submit { background-color: #ff7b00 !important; color: #0a0612 !important; font-weight: 900 !important; text-transform: uppercase !important; letter-spacing: 0.05em !important; padding: 1rem 2rem !important; border-radius: 0.75rem !important; transition: all 0.3s !important; cursor: pointer !important; border: none !important; }
+    .formkit-submit:hover { background-color: #ff3c38 !important; transform: scale(1.02); }
+    .formkit-alert { margin-top: 1rem !important; border-radius: 0.5rem !important; padding: 0.75rem !important; font-size: 0.875rem !important; }
+    .formkit-alert-success { background: #d3fbeb !important; color: #0c905c !important; }
+    .formkit-spinner { margin-right: 10px; }
+  </style>
+</head>
+
+<body class="bg-night text-white antialiased">
+
+  <section class="relative min-h-screen flex flex-col justify-center items-center text-center px-6 overflow-hidden sunset-gradient">
+    <svg class="absolute bottom-0 w-full z-0" viewBox="0 0 1440 320" preserveAspectRatio="none">
+      <path fill="rgba(27, 17, 48, 0.4)" d="M0,260L120,210L240,230L360,170L480,220L600,150L720,210L840,140L960,200L1080,120L1200,190L1320,150L1440,180L1440,320L0,320Z"></path>
+      <path fill="#0a0612" d="M0,300L90,240L180,275L270,190L360,260L450,170L540,255L630,160L720,250L810,180L900,260L990,150L1080,245L1170,170L1260,235L1350,200L1440,220L1440,320L0,320Z"></path>
+    </svg>
+
+    <div class="relative z-10 max-w-4xl">
+      <h1 class="text-6xl md:text-8xl font-black mb-4 tracking-tighter uppercase italic">
+        Desert <span class="text-night">Pulse</span>
+      </h1>
+      <p class="text-xl md:text-2xl text-white font-medium mb-10 max-w-2xl mx-auto drop-shadow-lg">
+        The heartbeat of the 915. A youth-led movement rising with the desert to protect our land and future.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#join" class="bg-night text-white animate-pulse-slow px-10 py-4 rounded-full font-bold text-lg hover:scale-105 transition-all shadow-2xl">
+          Join the Movement
+        </a>
+        <a href="#events" class="bg-white/10 backdrop-blur-md px-10 py-4 rounded-full font-bold text-lg hover:bg-white/20 transition-all border border-white/20">
+          View Events
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-24 px-6 max-w-5xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    <div>
+      <h2 class="text-4xl font-black mb-6 text-sunset1 uppercase italic">Resilience in the Chihuahuan</h2>
+      <p class="text-lg leading-relaxed text-white/80 mb-6">
+        El Paso is on the frontlines of the climate crisis. We are organizing to ensure the 915 stays livable for generations to come.
+      </p>
+      <ul class="space-y-4 text-white/90">
+        <li class="flex items-start gap-3">
+          <span class="text-sand text-2xl">🌵</span>
+          <span><strong>Urban Cooling:</strong> Fighting the heat island effect in our neighborhoods.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-sand text-2xl">💧</span>
+          <span><strong>Water Protection:</strong> Ensuring water security for the Borderlands.</span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-sand text-2xl">👥</span>
+          <span><strong>Connecting:</strong> Building a network of young climate leaders in El Paso.</span>
+        </li>
+      </ul>
+    </div>
+    <div class="bg-gradient-to-br from-sunset1/20 to-transparent p-1 rounded-3xl">
+       <div class="bg-[#0d0916] rounded-3xl p-8 border border-white/10 shadow-inner">
+          <p class="italic text-sand text-xl">"We aren't just fighting for the planet; we are fighting for our home."</p>
+       </div>
+    </div>
+  </section>
+
+  <section id="events" class="py-24 px-6 bg-[#0d0916] border-y border-white/5">
+    <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-black mb-4 text-sand uppercase italic">Upcoming Events</h2>
+            <p class="text-white/60">No experience needed.</p>
+        </div>
+
+        <div class="rounded-3xl overflow-hidden shadow-2xl border border-sunset1/30">
+            <iframe class="w-full bg-white" height="500" src="https://airtable.com/embed/shrXXXXXXXXXXXX?backgroundColor=purple"
+                frameborder="0"></iframe>
+        </div>
+    </div>
+  </section>
+
+  <section id="join" class="py-32 px-6 text-center relative overflow-hidden bg-night">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-sunset2/20 blur-[120px] rounded-full"></div>
+    <div class="relative z-10 max-w-xl mx-auto">
+      <h2 class="text-4xl font-black mb-4 text-white uppercase italic">Founding Members</h2>
+      <p class="mb-10 text-white/70 text-lg">Sign up for action alerts and meeting locations.</p>
+
+      <script src="https://f.convertkit.com/ckjs/ck.5.js"></script>
+      <form 
+        action="https://app.kit.com/forms/9075803/subscriptions" 
+        class="seva-form formkit-form" 
+        method="post" 
+        data-sv-form="9075803" 
+        data-uid="d66a661ee4" 
+        data-format="inline" 
+        data-version="5"
+      >
+        <div data-element="fields" class="formkit-fields">
+          <div class="formkit-field">
+            <input class="formkit-input" name="email_address" placeholder="Enter your email" required="" type="email">
+          </div>
+          <button data-element="submit" class="formkit-submit">
+            <span>Get Involved</span>
+          </button>
+        </div>
+        <div data-element="errors" class="formkit-alert formkit-alert-error"></div>
+      </form>
+
+      <p class="mt-8 text-xs text-white/30 tracking-widest uppercase">Privacy first. Built for the Borderlands.</p>
+    </div>
+  </section>
+
+  <footer class="py-12 px-6 text-center border-t border-white/5 text-white/40 text-sm">
+    <p>&copy; 2026 Desert Pulse El Paso.</p>
+  </footer>
+
+</body>
+</html>
