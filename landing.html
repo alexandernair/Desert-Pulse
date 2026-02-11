@@ -82,26 +82,37 @@
         </li>
       </ul>
     </div>
-    <div class="bg-gradient-to-br from-sunset1/20 to-transparent p-1 rounded-3xl">
-       <div class="bg-[#0d0916] rounded-3xl p-8 border border-white/10 shadow-inner">
-          <p class="italic text-sand text-xl">"We aren't just fighting for the planet; we are fighting for our home."</p>
+    <div class="group relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl aspect-video md:aspect-square">
+       <img 
+         src="franklinMountains.jpg" 
+         alt="Franklin Mountains, El Paso" 
+         class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 group-hover:rotate-1"
+       >
+       <div class="absolute inset-0 bg-gradient-to-t from-night via-transparent to-transparent opacity-60"></div>
+       
+       <div class="absolute bottom-6 left-6 right-6">
+         <p class="text-xs font-black uppercase tracking-[0.2em] text-sand mb-1">Our Frontline</p>
+         <p class="text-xl font-bold italic uppercase">Protecting the 915</p>
        </div>
     </div>
   </section>
 
-  <section id="events" class="py-24 px-6 bg-[#0d0916] border-y border-white/5">
+<section id="events" class="py-24 px-6 bg-[#0d0916] border-y border-white/5">
     <div class="max-w-5xl mx-auto">
         <div class="text-center mb-12">
-            <h2 class="text-4xl font-black mb-4 text-sand uppercase italic">Upcoming Events</h2>
-            <p class="text-white/60">No experience needed.</p>
+            <h2 class="text-4xl font-black mb-4 text-sand uppercase italic">Upcoming Actions</h2>
+            <p class="text-white/60">No experience needed. Click an event to RSVP.</p>
         </div>
 
-        <div class="rounded-3xl overflow-hidden shadow-2xl border border-sunset1/30">
-            <iframe class="w-full bg-white" height="500" src="https://airtable.com/embed/shrXXXXXXXXXXXX?backgroundColor=purple"
-                frameborder="0"></iframe>
+        <div class="rounded-3xl overflow-hidden border border-sunset1/20 bg-white/5 p-4">
+            <iframe src="https://luma.com/embed/calendar/cal-JPFWquafQJbQPiO/events" width="100%" height="600"
+                frameborder="0" style="border: 1px solid #0d0916; border-radius: 4px;" allowfullscreen=""
+                aria-hidden="false" tabindex="0"></iframe>
+            <script id="luma-checkout" src="https://embed.lu.ma/checkout-button.js"></script>
+
         </div>
-    </div>
-  </section>
+  </div>
+</section>
 
   <section id="join" class="py-32 px-6 text-center relative overflow-hidden bg-night">
     <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-sunset2/20 blur-[120px] rounded-full"></div>
